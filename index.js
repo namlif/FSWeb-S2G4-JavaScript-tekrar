@@ -18,7 +18,7 @@ function KareninAlani(kenaruzunlugu){
 }
 
 /* (Oto test yok) Yukarıdaki KareninAlani fonksiyonunu kenar uzunluğu = 10 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
-
+console.log(KareninAlani(10));
 
 
 /* 	GÖREV 1:  
@@ -29,10 +29,10 @@ function KareninAlani(kenaruzunlugu){
 			4. Hesaplanan çemberin çevresi döndürülecektir.
 		*/
 
-function CemberinCevresi(/* kodlar buraya */){
-	/* kodlar buraya */
+function CemberinCevresi(yaricap){
+	return 2 * pi * yaricap
 }
-
+console.log(CemberinCevresi(5))
 
 /* (Oto test yok) Yukarıdaki CemberinCevresi fonksiyonunu yarıçap = 5 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 
@@ -47,10 +47,10 @@ function CemberinCevresi(/* kodlar buraya */){
 			4. Hesaplanan çemberin alanı döndürülecektir.
 		*/
 		
-function CemberinAlani(/* kodlar buraya */){
-	/* kodlar buraya */
+function CemberinAlani(yaricap, pi){
+	return pi * Math.pow(yaricap, 2)
 }
-
+console.log(CemberinAlani(5, pi))
 
 /* (Oto test yok) Yukarıdaki CemberinAlani fonksiyonunu yarıçap = 15 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 
@@ -77,37 +77,47 @@ function CemberinAlani(/* kodlar buraya */){
 	
 	//3a çözümü
 
-	/* kodlar buraya */
 	
+	
+	for( let i = 0; i < sayilar.length; i++){
+		enbuyuk = Math.max(...sayilar)	
+	}
+	console.log(enbuyuk)
+
+	for( let i = 0; i < sayilar.length; i++){
+		enkucuk = Math.min(...sayilar)	
+	}
+	console.log(enkucuk)
 	
 	
 	// 3b çözümü:
+	ucetambolunenler = sayilar.filter(sayi => {
+		return sayi % 3 === 0;
+	})
+	console.log(ucetambolunenler)
 
-	/* kodlar buraya */
-		
-		
-		
+
 	//3c çözümü:
 	
-	/* kodlar buraya */
+	
+	
 
-	
-	
 	//3d çözümü
 	
-	/* kodlar buraya */
-
+	besyuzdenkucuksayilar = sayilar.filter(sayi => {
+		return sayi <500;
+	})
 
 
 	//3e çözümü
 
-	/* kodlar buraya */
-	
-	
+	siralisayilar = besyuzdenkucuksayilar.sort(function(a, b) {
+		return a - b;
+	  })
+	   
 	//3f çözümü
 	
-	/* kodlar buraya */
-
+	  
 
 
 
